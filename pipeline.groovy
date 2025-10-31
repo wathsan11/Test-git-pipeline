@@ -6,12 +6,12 @@ pipeline {
             steps {
                 echo 'Hello, World!'
             }
-
-        stage('run hello_world.py'){
-            sh 'python3 hello_world.py'
         }
-            
-        
+
+        stage('Run hello_world.py') {
+            steps {
+                sh 'python3 hello_world.py'
+            }
         }
     }
 }
