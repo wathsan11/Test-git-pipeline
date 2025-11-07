@@ -1,0 +1,9 @@
+- hosts: all
+  tasks:
+    - name: Check system uptime
+      ansible.builtin.shell: "uptime"
+      register: uptime
+
+    - name: Display uptime result
+      ansible.builtin.debug:
+        var: uptime.stdout
